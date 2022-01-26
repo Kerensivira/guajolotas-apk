@@ -1,12 +1,12 @@
 
-import Formulario from "../components/Formulario";
+
 import Guajolote from "../components/Guajolote";
 
 function App() {
   return (
-    <div className="App mt-5">
+    <div className="App">
       <Guajolote/> 
-      <Formulario/>
+      
     </div>
   );
 }
