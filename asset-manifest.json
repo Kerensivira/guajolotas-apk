@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/guappjalota/static/css/main.3aa53374.css",
+    "main.js": "/guappjalota/static/js/main.3aa593ee.js",
+    "index.html": "/guappjalota/index.html",
+    "main.3aa53374.css.map": "/guappjalota/static/css/main.3aa53374.css.map",
+    "main.3aa593ee.js.map": "/guappjalota/static/js/main.3aa593ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3aa53374.css",
+    "static/js/main.3aa593ee.js"
+  ]
+}
