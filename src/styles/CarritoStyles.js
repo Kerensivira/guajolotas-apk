@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const Carito = styled.div`
 padding: 40px;
 justify-content: center
@@ -32,15 +33,13 @@ padding-left: 150px;
 padding-right: 200px;
 `
 
-export const Boton = styled.button`
- background-color: #FA4A0C;
- border-radius: 30px;
+export const BotonC = styled.div`
  align-items: center;
  justify-content: center;
- //color: black;
+display: flex;
  width: 190px;
  height: 50px;
- margin-left: 45%;
+ margin-left: 25%;
  margin-bottom:20px ;
  margin-top: 80px;
 
