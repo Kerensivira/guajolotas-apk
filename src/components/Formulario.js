@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Formik } from "formik";
 import { urlUser } from '../helpers/Url';
 import axios from 'axios';
-import { Button, Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import { Cinput, Contrasenana, Correo, Div, Inicio, Linput } from '../styles/LoginStyles';
+import { Link, NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -16,7 +18,7 @@ const Formulario = () => {
 
       .then(response => {
         console.log(response.data)
-        
+
       })
       .catch(error => console.log(error))
   }
@@ -33,14 +35,14 @@ const Formulario = () => {
 
           validate={(valores) => {
             let errores = {};
-            
+
             if (!valores.nombre) {
               errores.nombre = ("Por favor ingresa un nombre");
             } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
               errores.nombre = "Escribe solo letras y espacio"
             }
 
-            
+
             if (!valores.correo) {
               errores.correo = ("Por favor ingresa un correo electronico");
             } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)) {
@@ -63,8 +65,10 @@ const Formulario = () => {
           {({ values, errors, handleSubmit, handleChange, handleBlur }) => (
 
             <form className='formulario' onSubmit={handleSubmit}>
-                <Div>
-                <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" width={100} height="auto" alt="" />
+              <Div>
+                <Link to="/">
+                  <img src="https://res.cloudinary.com/dbyw7mbt6/image/upload/v1642700045/guappjolotas/logo_a9tk2c.png" width={100} height="auto" alt="" />
+                </Link>
 
                 <Inicio><h1>Registrate.</h1></Inicio>
                 <Correo>
@@ -108,11 +112,13 @@ const Formulario = () => {
                   />
                 </Contrasenana>
 
-                <Button type='submit'>Crear Cuenta</Button>
-                {cuentaCreada && <p className="exito">Cuenta Creada con Éxito!</p>}
+                <Button type='submit' className='mb-2'>Crear Cuenta</Button>
+                <p className='mb-2 fs-6'>O si ya tienes una cuenta</p>
+                <Button type='button' as={Link} to="/iniciarSesion" variant="primar">Iniciar sesión</Button>
+                {cuentaCreada && <p className="exito">Cuenta Creada con Éxito! Ya puedes iniciar sesión</p>}
 
-            </Div>
-              </form>
+              </Div>
+            </form>
 
           )
 
