@@ -1,11 +1,13 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Carro, Boton, Carito, Foto, Titulo } from '../styles/CarritoStyles';
+import { Carro, Carito, Foto, Titulo, BotonC } from '../styles/CarritoStyles';
+import { Div } from '../styles/LoginStyles';
 import { Flecha } from '../styles/SliderStyles';
 
 const Carrito = () => {
   return (
-  
+  <Div>
    <Carito>
      <Titulo> <p>Carrito</p> </Titulo>
      <Link to="/producto">
@@ -18,10 +20,10 @@ const Carrito = () => {
       <Carro>
        <Foto src='https://res.cloudinary.com/vrilli/image/upload/v1643945289/Group_66_ryfy86.png' alt=''/>
        </Carro>
-     <Boton>Pagar</Boton>
+      <BotonC> <Button variant="primary">Pagar</Button> </BotonC>
 
    </Carito>
-   
+   </Div>
    );
 };
 
