@@ -9,11 +9,11 @@ justify-content: center
 
 export const Titulo = styled.p`
 text-align: center;
-color: #FF3E00;
+color: #000;
 font-weight: bold;
 font-size: larger;
-margin-top: 30px;
-font-size: 40px;
+margin-top: 10px;
+font-size: 30px;
 `
 
 export const Foto  = styled.img`
@@ -29,7 +29,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 80px;
-padding-left: 150px;
+padding-left: 160px;
 padding-right: 200px;
 `
 
@@ -39,7 +39,7 @@ export const BotonC = styled.div`
 display: flex;
  width: 190px;
  height: 50px;
- margin-left: 25%;
+ margin-left: 34%;
  margin-bottom:20px ;
  margin-top: 80px;
 
